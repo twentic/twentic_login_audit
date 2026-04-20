@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Add the administrator user to the Security Auditor group -->
+    <record id="base.user_admin" model="res.users">
+        <field name="groups_id" eval="[(4, ref('auth_session_audit.group_security_auditor'))]"/>
+    </record>
+</odoo>

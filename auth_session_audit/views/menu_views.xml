@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Root menu entry under Settings > Technical, positioned right after
+        the "Users & Companies" menu (base.menu_users, sequence ~10).
+    -->
+    <menuitem
+        id="menu_session_audit_root"
+        name="Session Audit"
+        parent="base.menu_administration"
+        sequence="15"
+        groups="auth_session_audit.group_security_auditor,base.group_system"
+    />
+
+    <menuitem
+        id="menu_session_history"
+        name="Session History"
+        parent="menu_session_audit_root"
+        action="action_session_history"
+        sequence="10"
+        groups="auth_session_audit.group_security_auditor,base.group_system"
+    />
+</odoo>

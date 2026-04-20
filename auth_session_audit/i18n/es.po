@@ -1,0 +1,156 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* auth_session_audit
+#
+# Translators:
+# Twentic <info@twentic.com>, 2026
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-16 00:00+0000\n"
+"PO-Revision-Date: 2026-03-16 00:00+0000\n"
+"Last-Translator: Twentic <info@twentic.com>\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: auth_session_audit
+#: model:ir.model,name:auth_session_audit.model_session_history
+msgid "Session History"
+msgstr "Historial de Sesiones"
+
+#. module: auth_session_audit
+#: model:ir.model.fields,field_description:auth_session_audit.field_session_history__user_id
+msgid "User"
+msgstr "Usuario"
+
+#. module: auth_session_audit
+#: model:ir.model.fields,field_description:auth_session_audit.field_session_history__login_date
+msgid "Login Date"
+msgstr "Fecha de Acceso"
+
+#. module: auth_session_audit
+#: model:ir.model.fields,field_description:auth_session_audit.field_session_history__ip_address
+msgid "IP Address"
+msgstr "Dirección IP"
+
+#. module: auth_session_audit
+#: model:ir.model.fields,field_description:auth_session_audit.field_session_history__user_agent
+msgid "User Agent"
+msgstr "Agente de Usuario"
+
+#. module: auth_session_audit
+#: model:ir.model.fields,field_description:auth_session_audit.field_session_history__location
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: auth_session_audit
+#: model:ir.model.fields,field_description:auth_session_audit.field_session_history__latitude
+msgid "Latitude"
+msgstr "Latitud"
+
+#. module: auth_session_audit
+#: model:ir.model.fields,field_description:auth_session_audit.field_session_history__longitude
+msgid "Longitude"
+msgstr "Longitud"
+
+#. module: auth_session_audit
+#: model:ir.model.fields,field_description:auth_session_audit.field_session_history__session_id
+msgid "Session ID"
+msgstr "ID de Sesión"
+
+#. module: auth_session_audit
+#: model:res.groups,name:auth_session_audit.group_security_auditor
+msgid "Security Auditor"
+msgstr "Auditor de Seguridad"
+
+#. module: auth_session_audit
+#: model:ir.actions.act_window,name:auth_session_audit.action_session_history
+msgid "Sessions History"
+msgstr "Historial de Sesiones"
+
+#. module: auth_session_audit
+#: model:ir.ui.menu,name:auth_session_audit.menu_session_audit_root
+msgid "Session Audit"
+msgstr "Auditoría de Sesiones"
+
+#. module: auth_session_audit
+#: model:ir.ui.menu,name:auth_session_audit.menu_session_history
+msgid "Session History"
+msgstr "Historial de Sesiones"
+
+#. module: auth_session_audit
+#: model:ir.module.category,name:auth_session_audit.module_category_auth_session_audit
+msgid "Session Audit"
+msgstr "Auditoría de Sesiones"
+
+#. module: auth_session_audit
+#: model:ir.module.module,shortdesc:base.module_auth_session_audit
+msgid "Auth Session Audit"
+msgstr "Auditoría de Sesiones de Acceso"
+
+#. module: auth_session_audit
+#: model:ir.module.module,summary:base.module_auth_session_audit
+msgid "Track and audit user login sessions"
+msgstr "Registra y audita las sesiones de inicio de sesión de usuarios"
+
+#. module: auth_session_audit
+#: model_terms:ir.ui.view,arch_db:auth_session_audit.view_session_history_form
+msgid "Session"
+msgstr "Sesión"
+
+#. module: auth_session_audit
+#: model_terms:ir.ui.view,arch_db:auth_session_audit.view_session_history_form
+msgid "Connection"
+msgstr "Conexión"
+
+#. module: auth_session_audit
+#: model_terms:ir.ui.view,arch_db:auth_session_audit.view_session_history_form
+#: model_terms:ir.ui.view,arch_db:auth_session_audit.view_session_history_tree
+msgid "Session History"
+msgstr "Historial de Sesiones"
+
+#. module: auth_session_audit
+#: model_terms:ir.ui.view,arch_db:auth_session_audit.view_session_history_search
+msgid "Internal Users"
+msgstr "Usuarios Internos"
+
+#. module: auth_session_audit
+#: model_terms:ir.ui.view,arch_db:auth_session_audit.view_session_history_search
+msgid "Portal Users"
+msgstr "Usuarios del Portal"
+
+#. module: auth_session_audit
+#: model_terms:ir.ui.view,arch_db:auth_session_audit.view_session_history_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: auth_session_audit
+#: model_terms:ir.ui.view,arch_db:auth_session_audit.view_session_history_search
+msgid "By Day"
+msgstr "Por Día"
+
+#. module: auth_session_audit
+#: model_terms:ir.ui.view,arch_db:auth_session_audit.view_session_history_search
+msgid "By User"
+msgstr "Por Usuario"
+
+#. module: auth_session_audit
+#: model_terms:ir.ui.view,arch_db:auth_session_audit.view_session_history_search
+msgid "By IP"
+msgstr "Por IP"
+
+#. module: auth_session_audit
+#: model_terms:ir.ui.view,arch_db:auth_session_audit.view_session_history_tree
+msgid "No session records found."
+msgstr "No se encontraron registros de sesión."
+
+#. module: auth_session_audit
+#: model_terms:ir.ui.view,arch_db:auth_session_audit.view_session_history_tree
+msgid "Session records are created automatically each time a user successfully authenticates."
+msgstr "Los registros de sesión se crean automáticamente cada vez que un usuario se autentica con éxito."

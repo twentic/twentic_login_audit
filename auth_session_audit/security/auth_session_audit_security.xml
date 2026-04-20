@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Technical category for the auditor group -->
+    <record id="module_category_auth_session_audit" model="ir.module.category">
+        <field name="name">Session Audit</field>
+        <field name="description">Manage access to session audit features.</field>
+        <field name="sequence">100</field>
+        <field name="visible" eval="False"/>
+    </record>
+
+    <!-- Security Auditor group -->
+    <record id="group_security_auditor" model="res.groups">
+        <field name="name">Security Auditor</field>
+        <field name="category_id" ref="module_category_auth_session_audit"/>
+        <field name="comment">
+            Members of this group can read the session history audit trail
+            but cannot create, modify, or delete any record.
+        </field>
+    </record>
+</odoo>

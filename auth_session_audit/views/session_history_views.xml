@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ================================================================
+         Form view (read-only)
+    ================================================================ -->
+    <record id="view_session_history_form" model="ir.ui.view">
+        <field name="name">session.history.form</field>
+        <field name="model">session.history</field>
+        <field name="arch" type="xml">
+            <form string="Session History" create="false" edit="false" delete="false">
+                <sheet>
+                    <group>
+                        <group string="Session">
+                            <field name="user_id" readonly="1" widget="many2one_avatar_user"/>
+                            <field name="login_date" readonly="1"/>
+                            <field name="session_id" readonly="1"/>
+                        </group>
+                        <group string="Connection">
+                            <field name="ip_address" readonly="1"/>
+                            <field name="user_agent" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Location">
+                        <group>
+                            <field name="location" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="latitude" readonly="1"/>
+                            <field name="longitude" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ================================================================
+         List (tree) view
+    ================================================================ -->
+    <record id="view_session_history_tree" model="ir.ui.view">
+        <field name="name">session.history.tree</field>
+        <field name="model">session.history</field>
+        <field name="arch" type="xml">
+            <list string="Session History" create="false" edit="false" delete="false">
+                <field name="user_id" widget="many2one_avatar_user"/>
+                <field name="login_date"/>
+                <field name="ip_address"/>
+                <field name="location"/>
+                <field name="latitude" optional="hide"/>
+                <field name="longitude" optional="hide"/>
+                <field name="user_agent" optional="hide"/>
+                <field name="session_id" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ================================================================
+         Search view
+    ================================================================ -->
+    <record id="view_session_history_search" model="ir.ui.view">
+        <field name="name">session.history.search</field>
+        <field name="model">session.history</field>
+        <field name="arch" type="xml">
+            <search string="Session History">
+                <!-- Quick-search fields -->
+                <field name="user_id" string="User"/>
+                <field name="ip_address" string="IP Address"/>
+
+                <!-- Predefined filters -->
+                <filter
+                    string="Internal Users"
+                    name="filter_internal_users"
+                    domain="[('user_id.share', '=', False)]"
+                />
+                <filter
+                    string="Portal Users"
+                    name="filter_portal_users"
+                    domain="[('user_id.share', '=', True)]"
+                />
+
+                <separator/>
+
+                <!-- Group by options -->
+                <group expand="0" string="Group By">
+                    <filter
+                        string="By Day"
+                        name="group_by_login_date_day"
+                        context="{'group_by': 'login_date:day'}"
+                    />
+                    <filter
+                        string="By User"
+                        name="group_by_user"
+                        context="{'group_by': 'user_id'}"
+                    />
+                    <filter
+                        string="By IP"
+                        name="group_by_ip"
+                        context="{'group_by': 'ip_address'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- ================================================================
+         Window action
+    ================================================================ -->
+    <record id="action_session_history" model="ir.actions.act_window">
+        <field name="name">Sessions History</field>
+        <field name="res_model">session.history</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_session_history_search"/>
+        <field name="context">{'search_default_group_by_login_date_day': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No session records found.
+            </p>
+            <p>
+                Session records are created automatically each time a user
+                successfully authenticates.
+            </p>
+        </field>
+    </record>
+</odoo>

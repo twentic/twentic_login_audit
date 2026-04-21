@@ -18,6 +18,7 @@
         'views/session_history_views.xml',
         'views/menu_views.xml',
     ],
+    'images': ['static/description/main_screenshot.png'],
     'installable': True,
     'auto_install': False,
     'application': False,
